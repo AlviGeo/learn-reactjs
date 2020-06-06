@@ -8,12 +8,18 @@ import Counter from './components/Counter';
 import FunctionClick from './components/FunctionClick';
 import ClassClick from './components/ClassClick';
 import EventBind from './components/EventBind';
+import LifecycleA from "./components/LifecycleA";
+import FragmentDemo from "./components/FragmentDemo";
+import Table from "./components/Table";
 
 class App extends Component {
   render() {
   return (
     <div className="App">
-      <EventBind />
+      <Table />
+      {/* <FragmentDemo /> */}
+      {/* <LifecycleA /> */}
+      {/* <EventBind /> */}
       {/* <FunctionClick /> */}
       {/* <ClassClick /> */}
       {/* <Counter /> */}

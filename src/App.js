@@ -17,12 +17,36 @@ import RefsDemo from "./refs  component/RefsDemo";
 import FocusInput from "./refs  component/FocusInput";
 import FRParentInput from "./refs  component/FRParentInput";
 import PortalDemo from "./components/PortalDemo";
+import Hero from "./error /Hero";
+import ErrorBoundary from "./error /ErrorBoundary";
+import ClickCounter from "./high order component/ClickCounter";
+import HoverCounter from './high order component/HoverCounter';
 
 class App extends Component {
   render() {
   return (
     <div className="App">
-      <PortalDemo />
+      <ClickCounter />
+      <HoverCounter />
+
+
+      <ErrorBoundary>
+      <Hero heroName="Batman" />
+      </ErrorBoundary> 
+
+      <ErrorBoundary>
+        <Hero heroName="Superman" />
+      </ErrorBoundary>
+
+      <ErrorBoundary>
+        <Hero heroName="Joker" />
+      </ErrorBoundary>
+      </div> 
+      );
+    }
+    }
+      
+      {/* <PortalDemo /> */}
       {/* <FRParentInput /> */}
       {/* <FocusInput /> */}
       {/* <RefsDemo /> */}
@@ -47,9 +71,6 @@ class App extends Component {
       {/* <Welcome name="Clark" heroName="Superman"/> */}
       {/* <Welcome name="Diana" heroName="Wonder Woman"/> */}
       {/* <Hello /> */}
-    </div>
-  );
-}
-}
+    
 
 export default App;

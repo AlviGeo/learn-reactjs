@@ -4,7 +4,7 @@ import Greet from "./components/Greet";
 import Welcome from "./components/Welcome";
 import Hello from "./components/Hello";
 import Message from './components/Message';
-import Counter from './components/Counter';
+// import Counter from './components/Counter';
 import FunctionClick from './components/FunctionClick';
 import ClassClick from './components/ClassClick';
 import EventBind from './components/EventBind';
@@ -21,31 +21,39 @@ import Hero from "./error /Hero";
 import ErrorBoundary from "./error /ErrorBoundary";
 import ClickCounter from "./high order component/ClickCounter";
 import HoverCounter from './high order component/HoverCounter';
+import ClickCounterTwo from "./render props/ClickCounterTwo";
+import HoverCounterTwo from "./render props/HoverCounterTwo";
+import User from "./render props/User";
+import Counter from './render props/Counter';
 
 class App extends Component {
   render() {
   return (
     <div className="App">
-      <ClickCounter />
+      <Counter render={(count, incrementCount) => ( <ClickCounterTwo count={count} incrementCount={incrementCount} />
+      )} 
+      />
+      <HoverCounterTwo render={(count, incrementCount) => ( <ClickCounterTwo count={count} incrementCount={incrementCount} />
+      )} 
+      />
+    </div>
+
+      {/* <ClickCounter />
       <HoverCounter />
-
-
-      <ErrorBoundary>
+      
+       <ErrorBoundary>
       <Hero heroName="Batman" />
       </ErrorBoundary> 
-
+      
       <ErrorBoundary>
         <Hero heroName="Superman" />
       </ErrorBoundary>
-
+      
       <ErrorBoundary>
         <Hero heroName="Joker" />
-      </ErrorBoundary>
-      </div> 
-      );
-    }
-    }
-      
+      </ErrorBoundary> */}
+
+  
       {/* <PortalDemo /> */}
       {/* <FRParentInput /> */}
       {/* <FocusInput /> */}
